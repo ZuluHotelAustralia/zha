@@ -21,7 +21,7 @@ program reconnect( who )
 		start_script(":email:message", who);
 	endif
 	SetClasse(who);
-	//if (getexistinglogons(who) == 1)
- 	//	DisconnectClient(who);
- 	//endif
+	if (getexistinglogons(who) == 1)
+ 		DisconnectClient(who);
+ 	endif
 endprogram

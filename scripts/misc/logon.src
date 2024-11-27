@@ -14,8 +14,8 @@ program logon( who )
 	endif
 
 	start_script( "::playermanager", who );
-	// if (getexistinglogons(who) == 1)
- // 		DisconnectClient(who);
- // 		return;
- // 	endif
+	if (getexistinglogons(who) == 1)
+ 		DisconnectClient(who);
+ 		return;
+ 	endif
 endprogram
